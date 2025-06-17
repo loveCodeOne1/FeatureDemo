@@ -1,20 +1,14 @@
 package com.zd.featuredemo.ui.activity
 
-import android.app.Activity
+import android.animation.AnimatorSet
 import android.content.Intent
-import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
-import android.widget.ImageView
 import android.widget.Toast
-import androidx.annotation.LayoutRes
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
+import androidx.appcompat.app.AppCompatActivity
 import bindView
 import com.zd.featuredemo.R
 import com.zd.featuredemo.databinding.ActivityMainBinding
-import com.zd.featuredemo.ui.fragment.MatchFragment
 
 class MainActivity: AppCompatActivity(){
 
@@ -24,12 +18,20 @@ class MainActivity: AppCompatActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         initView()
         initListener()
 
 
 
+        }
+
+    private fun test():Boolean{
+        return false
     }
+
+
+
 
     private fun initListener() {
         binding.tvFun.setOnClickListener {
@@ -49,6 +51,14 @@ class MainActivity: AppCompatActivity(){
             when(position){
                 0-> {
                     startActivity(Intent(this,MatchActivity::class.java))
+                }
+                1->{
+                    val intent = Intent()
+                    intent.setClassName("com.night.coroutinenetdemo","com.night.coroutinenetdemo.MainActivity2")
+                    startActivity(intent)
+                }
+                2->{
+                    startActivity(Intent(this,AnimationActivity::class.java))
                 }
             }
         }
