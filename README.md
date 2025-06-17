@@ -22,3 +22,5 @@ adb shell am broadcast -a <Action名> --es <key> <value>
 发送给指定 BroadcastReceiver 的广播。
 adb shell am broadcast -n <包名>/<Receiver全类名> -a <Action名>
 ```
+
+2398453
