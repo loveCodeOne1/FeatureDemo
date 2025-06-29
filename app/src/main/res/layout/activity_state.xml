@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.activity.StateActivity"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#8C8080">
+
+        <RelativeLayout
+            android:id="@+id/state_parent"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@drawable/state_list_selector">
+
+            <View
+                android:id="@+id/state_child"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/state_list_selector"
+                android:layout_marginBottom="10dp"
+                android:duplicateParentState="true"/>
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/state_child2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/state_unenabled_bc"
+            android:layout_below="@+id/state_child"
+            android:layout_alignStart="@+id/state_child"
+            android:layout_alignEnd="@id/state_child" />
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/stat_float_width"
+    android:layout_height="@dimen/stat_float_height"
+    android:background="@color/black">
+
+</androidx.constraintlayout.widget.ConstraintLayout>

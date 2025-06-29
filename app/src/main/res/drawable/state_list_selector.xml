@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--设置enable 为false时-->
+    <item android:drawable="@drawable/state_selected_unenabled_bc" android:state_selected="true" android:state_enabled="false"/>
+    <item android:drawable="@drawable/state_unenabled_bc" android:state_enabled="false"/>
+
+    <!--设置activated 为false时-->
+    <item android:drawable="@drawable/state_selected_unactivated_bc" android:state_selected="true" android:state_activated="false"/> <!--不可用开启-->
+    <item android:drawable="@drawable/state_unactivated_bc" android:state_activated="false" /> <!--不可用未开启-->
+
+    <!--设置selected 为true时-->
+    <item android:drawable="@drawable/state_selected_bc" android:state_selected="true" /> <!--正常开启状态-->
+
+    <!--默认不选中-->
+    <item android:drawable="@drawable/state_unselected_bc" /> <!--正常关闭状态-->
+</selector>

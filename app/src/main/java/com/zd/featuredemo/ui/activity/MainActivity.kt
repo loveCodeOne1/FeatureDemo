@@ -23,7 +23,6 @@ class MainActivity: AppCompatActivity(){
         initListener()
 
 
-
         }
 
     private fun test():Boolean{
@@ -54,11 +53,14 @@ class MainActivity: AppCompatActivity(){
                 }
                 1->{
                     val intent = Intent()
-                    intent.setClassName("com.night.coroutinenetdemo","com.night.coroutinenetdemo.MainActivity2")
+                    intent.setClassName("com.zd.featuredemo","com.zd.featuredemo.ui.activity.StateActivity")
                     startActivity(intent)
                 }
                 2->{
                     startActivity(Intent(this,AnimationActivity::class.java))
+                }
+                3->{
+                    startActivity(Intent(this,TestActivity::class.java))
                 }
             }
         }

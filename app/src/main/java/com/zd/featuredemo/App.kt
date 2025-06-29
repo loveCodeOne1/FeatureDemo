@@ -5,7 +5,6 @@ import android.content.Context
 import androidx.recyclerview.widget.ListAdapter
 
 class App:Application() {
-    lateinit var context: Context
 
     override fun attachBaseContext(base: Context?) {
         super.attachBaseContext(base)
@@ -13,5 +12,9 @@ class App:Application() {
     }
     override fun onCreate() {
         super.onCreate()
+    }
+
+    companion object{
+        lateinit var context: Context
     }
 }
