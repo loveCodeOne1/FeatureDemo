@@ -2,4 +2,6 @@
 <resources>
     <dimen name="stat_float_width">330dp</dimen>
     <dimen name="stat_float_height">580dp</dimen>
+    <dimen name="spacing_8xs">8dp</dimen>
+    <dimen name="spacing_12xs">12dp</dimen>
 </resources>

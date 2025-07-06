@@ -23,11 +23,39 @@
             android:textColor="@color/white"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ListView
-            android:id="@+id/listview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-           app:layout_constraintTop_toBottomOf="@+id/tv_fun"/>
+            <LinearLayout
+                android:id="@+id/scroll_ll"
+                android:layout_width="230dp"
+                android:layout_height="500dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_fun">
+                <ScrollView
+                    android:id="@+id/scrollView"
+                    android:layout_width="230dp"
+                    android:layout_height="match_parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_fun"
+                    android:scrollbars="none">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/scroll_recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </ScrollView>
+            </LinearLayout>
+        <com.zd.featuredemo.customview.AdayoScrollingBar2
+            android:id="@+id/scrolingBar"
+            app:layout_constraintTop_toBottomOf="@+id/tv_fun"
+            app:layout_constraintStart_toEndOf="@+id/scroll_ll"
+            android:layout_marginStart="40dp"
+            android:layout_width="100dp"
+            android:layout_height="400dp"
+            android:background="#A84CAF50"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
