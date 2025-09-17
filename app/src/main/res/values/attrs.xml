@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SmartScrollBar">
+        <!-- ✅  方向 -->
+        <attr format="enum" name="smart_orientation">
+            <enum name="horizontal" value="0"/>
+            <enum name="vertical" value="1"/>
+        </attr>
+        <!-- ✅  background 圆角（只支持 Android 5.0 以上的版本） -->
+        <attr format="dimension" name="smart_background_corner"/>
+        <!-- ✅  sliderBar 圆角 -->
+        <attr format="dimension" name="smart_slider_corner"/>
+        <!-- ✅  sliderBar 颜色 -->
+        <attr format="color" name="smart_slider_color"/>
+        <!-- ✅  RecyclerView 无法滑动时，scroll 的状态 -->
+        <attr format="enum" name="smart_cant_scroll_style">
+            <enum name="dismiss_invisible" value="0"/>  <!-- 消失（invisible） -->
+            <enum name="dismiss_gone" value="1"/>   <!-- 消失（gone） -->
+            <enum name="visible" value="2"/>    <!-- 显示 scroll -->
+        </attr>
+        <!-- ✅ 滑块风格 -->
+        <attr format="enum" name="smart_slider_style">
+            <enum name="倍数缩放" value="0"/>
+            <enum name="固定大小" value="1"/>
+        </attr>
+        <!-- ✅  滑块长度 -->
+        <attr format="fraction|dimension" name="smart_slider_length"/>
+        <!-- ❌  滑块图片 -->
+        <attr format="reference" name="smart_slider_img"/>
+        <!-- ✅  滑块隐藏风格 -->
+        <attr format="enum" name="smart_can_scroll_style">
+            <enum name="always_show" value="0"/>
+            <enum name="dismiss_awhile" value="1"/>
+        </attr>
+        <!-- ✅  sliderBar 多少毫秒(ms)后消失 -->
+        <attr format="integer" name="smart_dismiss_time"/>
+        <!-- ✅ 支持拖拽 sliderBar -->
+        <attr format="boolean" name="smart_enable_drag"/>
+    </declare-styleable>
+</resources>

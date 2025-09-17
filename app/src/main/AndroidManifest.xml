@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
 
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
@@ -23,6 +25,9 @@
             android:name=".ui.activity.StateActivity"
             android:exported="false" />
         <activity
+            android:name=".ui.activity.TestActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.AnimationActivity"
             android:exported="false" />
         <activity
@@ -38,8 +43,18 @@
             android:name=".ui.activity.MatchActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.activity.TestActivity"
+            android:name=".ui.activity.MotionActivity"
             android:exported="true" />
+        <activity
+            android:name=".ui.activity.ScrollActivity"
+            android:exported="true" />
+        <receiver android:name=".TestReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
