@@ -23,4 +23,6 @@ adb shell am broadcast -a <Action名> --es <key> <value>
 adb shell am broadcast -n <包名>/<Receiver全类名> -a <Action名>
 ```
 
-2398453
+Dev update
+master 1
+test commit 2025.09.17
