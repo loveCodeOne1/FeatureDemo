@@ -24,3 +24,4 @@ adb shell am broadcast -n <包名>/<Receiver全类名> -a <Action名>
 ```
 
 test commit2 2025.09.17
+test commit3_a 2025.09.17
