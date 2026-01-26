@@ -25,13 +25,13 @@
 
             <LinearLayout
                 android:id="@+id/scroll_ll"
-                android:layout_width="230dp"
+                android:layout_width="match_parent"
                 android:layout_height="500dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_fun">
                 <ScrollView
                     android:id="@+id/scrollView"
-                    android:layout_width="230dp"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/tv_fun"
@@ -41,10 +41,10 @@
                         android:layout_height="match_parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
-                        <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/scroll_recyclerView"
+                        <ListView
+                            android:id="@+id/listview"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="500dp" />
                     </RelativeLayout>
                 </ScrollView>
             </LinearLayout>
