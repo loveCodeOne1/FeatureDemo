@@ -33,4 +33,5 @@ cherry-pick
 1、测试cherry-pick commit x
 2、测试需要制造冲突
 2、unbundled 的冲突
+3、真正的测试 cherry-pick commit -x
 
