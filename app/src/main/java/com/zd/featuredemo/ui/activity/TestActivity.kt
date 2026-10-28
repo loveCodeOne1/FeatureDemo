@@ -85,6 +85,9 @@ class TestActivity : AppCompatActivity() {
             mBinding.btnFinishTimer.setOnClickListener {
                 contDownTimer.cancel()
             }
+            mBinding.btnFinishActivity.setOnClickListener {
+                finish()
+            }
         }
 
     }

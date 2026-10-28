@@ -1,0 +1,11 @@
+.gradle/
+.idea/
+app/build/
+app/src/androidTest/
+app/src/test/
+build/
+gradle/wrapper/
+gradlew
+gradlew.bat
+hs_err_pid60000.log
+local.properties

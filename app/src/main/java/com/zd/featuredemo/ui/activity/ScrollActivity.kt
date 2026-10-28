@@ -8,6 +8,8 @@ import com.zd.featuredemo.R
 import com.zd.featuredemo.databinding.ActivityScrollLayoutBinding
 import com.zd.featuredemo.ui.list.ListAdapter
 import com.zd.featuredemo.ui.list.model.ListModel
+import java.util.Locale
+import java.util.Locale.getDefault
 import java.util.Random
 
 class ScrollActivity:AppCompatActivity() {
@@ -55,9 +57,9 @@ fun getRandColor():String{
     var R:String
     var G:String
     var B:String
-    R = Integer.toHexString(random.nextInt(256)).toUpperCase()
-    G = Integer.toHexString(random.nextInt(256)).toUpperCase()
-    B = Integer.toHexString(random.nextInt(256)).toUpperCase()
+    R = Integer.toHexString(random.nextInt(256)).uppercase(getDefault())
+    G = Integer.toHexString(random.nextInt(256)).uppercase(getDefault())
+    B = Integer.toHexString(random.nextInt(256)).uppercase(getDefault())
 
     R = if(R.length == 1) "0"+R else R
     G = if(G.length == 1) "0"+G else G

@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
-
-
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
 
     <application
@@ -18,9 +17,12 @@
         android:theme="@style/Theme.FeatureDemo"
         tools:targetApi="31">
         <activity
+            android:name=".ui.activity.RiveActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.activity.FloatTestActivity"
-            android:exported="true"
-            android:enabled="true"/>
+            android:enabled="true"
+            android:exported="true" />
         <activity
             android:name=".ui.activity.StateActivity"
             android:exported="false" />
@@ -48,13 +50,28 @@
         <activity
             android:name=".ui.activity.ScrollActivity"
             android:exported="true" />
-        <receiver android:name=".TestReceiver"
+
+        <receiver
+            android:name=".TestReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="app.rive.runtime.kotlin.RiveInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <!-- Add this if using Rive in multiple processes -->
+        <meta-data
+            android:name="app.rive.runtime.kotlin.disable-startup-init"
+            android:value="false" />
     </application>
 
 </manifest>

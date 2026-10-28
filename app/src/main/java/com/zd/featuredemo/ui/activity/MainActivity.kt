@@ -65,10 +65,13 @@ class MainActivity: AppCompatActivity(){
                     startActivity(Intent(this,MotionActivity::class.java))
                 }
                 5->{
-                    startActivity(Intent(this,ScrollActivity::class.java))
+//                    startActivity(Intent(this,ScrollActivity::class.java))
                 }
                 6->{
                     startActivity(Intent(this,TestActivity::class.java))
+                }
+                7->{
+                    startActivity(Intent(this, RiveActivity::class.java))
                 }
             }
         }
